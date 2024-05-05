@@ -37,15 +37,12 @@ hepatitis_model = joblib.load('models/hepititisc_model.sav')
 liver_model = joblib.load('models/liver_model.sav')# Load the lung cancer prediction model
 lung_cancer_model = joblib.load('models/lung_cancer_model.sav')
 
-st.markdown(
-    """
-    <style>
-    body {
-        background-color: #ADD8E6; 
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
+st.set_page_config(
+    page_title="My Streamlit App",
+    page_icon=":smiley:",
+    layout="wide",
+    initial_sidebar_state="expanded",
+    background_color="#ADD8E6"  # Light blue color
 )
 
 # sidebar
