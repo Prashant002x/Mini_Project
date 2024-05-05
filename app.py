@@ -39,53 +39,21 @@ lung_cancer_model = joblib.load('models/lung_cancer_model.sav')
 
 
 # sidebar
-# with st.sidebar:
-#     selected = option_menu('Mini Project', [
-#         # 'Disease Prediction',
-#         'Diabetes Prediction',
-#         'Heart disease Prediction',
-#         'Parkison Prediction',
-#         'Liver prediction',
-#         'Hepatitis prediction',
-#         'Lung Cancer Prediction',
-#         'Chronic Kidney prediction',
-#         'Breast Cancer Prediction',
+with st.sidebar:
+    selected = option_menu('Mini Project', [
+        # 'Disease Prediction',
+        'Diabetes Prediction',
+        'Heart disease Prediction',
+        'Parkison Prediction',
+        'Liver prediction',
+        'Hepatitis prediction',
+        'Lung Cancer Prediction',
+        'Chronic Kidney prediction',
+        'Breast Cancer Prediction',
 
-#     ],
-#         icons=['','activity', 'heart', 'person','person','person','person','bar-chart-fill'],
-#         default_index=0)
-# import streamlit as st
-
-# Define the options for the menu
-options_left = [
-    {'name': 'Diabetes Prediction', 'icon': 'activity'},
-    {'name': 'Heart disease Prediction', 'icon': 'heart'},
-    {'name': 'Parkinson Prediction', 'icon': 'person'},
-    {'name': 'Liver prediction', 'icon': 'person'}
-]
-
-options_right = [
-    {'name': 'Hepatitis prediction', 'icon': 'person'},
-    {'name': 'Lung Cancer Prediction', 'icon': 'person'},
-    {'name': 'Chronic Kidney prediction', 'icon': 'person'},
-    {'name': 'Breast Cancer Prediction', 'icon': 'bar-chart-fill'}
-]
-
-# Custom function to create option menu with icons
-def option_menu(label, options, icons, default_index=0):
-    selected_index = st.selectbox(label, range(len(options)), format_func=lambda i: options[i], default=default_index)
-    return options[selected_index]
-
-# Divide the sidebar into two columns
-col1, col2 = st.sidebar.columns(2)
-
-# Add the option menu with icons to each column
-with col1:
-    selected_left = option_menu("Select a prediction type (Left)", options_left, [opt['icon'] for opt in options_left])
-
-with col2:
-    selected_right = option_menu("Select a prediction type (Right)", options_right, [opt['icon'] for opt in options_right])
-
+    ],
+        icons=['','activity', 'heart', 'person','person','person','person','bar-chart-fill'],
+        default_index=0)
 
 
 
