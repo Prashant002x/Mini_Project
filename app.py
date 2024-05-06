@@ -41,7 +41,7 @@ lung_cancer_model = joblib.load('models/lung_cancer_model.sav')
 
 # sidebar
 with st.sidebar:
-    selected = option_menu('Mini Project', [
+    selected = option_menu('HealthCheckMate', [
         # 'Disease Prediction',
         'Diabetes Prediction',
         'Heart disease Prediction',
@@ -97,7 +97,7 @@ with st.sidebar:
 if selected == 'Diabetes Prediction':  # pagetitle
     st.title("Diabetes disease prediction")
     image = Image.open('d3.jpg')
-    st.image(image, caption='diabetes disease prediction')
+    st.image(image, caption='Diabetes Disease Prediction')
     # columns
     # no inputs from the user
     name = st.text_input("Name:")
